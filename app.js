@@ -16,7 +16,7 @@ io.on('connection', (socket) => {
         var msg = JSON.parse(str);
         treatMessage(str);
     });
-    socket.on('disconnect', () => console.log('Client disconnected'));
+socket.on('disconnect', () => console.log('Client disconnected'));
 });
 function treatMessage(pMsg){
     var ret = "";
