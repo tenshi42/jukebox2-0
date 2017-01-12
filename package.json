@@ -2,9 +2,6 @@
   "name": "jukebox2-0",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
   "dependencies": {
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
@@ -15,5 +12,11 @@
     "serve-favicon": "~2.3.0",
     "ws": "latest",
     "socket.io": "latest"
+  },
+  "engines": {
+    "node": "6.2.0"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }
