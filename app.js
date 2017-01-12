@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);  //pass a http.Server instance
-server.listen(82);
+server.listen(PORT);
 
 io.on('connection', (socket) => {
     console.log('Client connected');
