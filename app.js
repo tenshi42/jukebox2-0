@@ -10,6 +10,10 @@ var server = http.createServer(app);
 var io = require('socket.io').listen(server);  //pass a http.Server instance
 server.listen(PORT);
 
+express.get('/', function(req, res){
+    res.send('<h1>Hello world</h1>');
+});
+
 io.on('connection', (socket) => {
     console.log('Client connected');
     ws.on("message", function (str) {
