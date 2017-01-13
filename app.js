@@ -16,7 +16,9 @@ const wss = new SocketServer({ server });
 
 wss.on('connection', (ws) => {
     console.log('Client connected');
+    ws.send("yo");
     ws.on('close', () => console.log('Client disconnected'));
+
 });
 
 setInterval(() => {
