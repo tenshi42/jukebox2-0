@@ -23,7 +23,7 @@ wss.on('connection', (ws) => {
 
 setInterval(() => {
     wss.clients.forEach((client) => {
-        var msg = {'type':'date', 'content':new Date().toTimeString()};
+        var msg = {'type':'time', 'payload':new Date().toTimeString()};
         client.send(JSON.stringify(msg));
     });
 }, 1000);
